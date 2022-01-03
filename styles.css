@@ -31,7 +31,7 @@ p {
 }
 
 img {
-	max-width: 100%;
+	/* max-width: 100%; */
 	display: block;
 }
 
@@ -42,6 +42,7 @@ body {
 	place-items: center;
 
 	height: 100vh;
+	padding-inline: 1rem;
 
 	font-family: var(--ff-kumbh-sans);
 	font-size: var(--fz-body);
@@ -58,7 +59,8 @@ body {
 
 .illustration__woman {
 	position: absolute;
-	top: -90%;
+	top: -100%;
+	left: -1.5rem;
 }
 
 .illustration--desktop {
@@ -75,8 +77,9 @@ body {
 	align-items: center;
 	gap: 1.25rem;
 
+	margin-top: 5rem;
 	padding: 0 1rem 1.75rem 1rem;
-	max-width: 90%;
+	max-width: 60rem;
 	min-width: 19.75rem;
 
 	background: hsl(0, 0%, 100%);
@@ -110,7 +113,7 @@ body {
 .faq__question {
 	position: relative;
 
-	margin-block: 5px;
+	margin-block: 10px;
 
 	color: var(--clr-gray-blue);
 	font-size: 0.9rem;
@@ -146,6 +149,10 @@ body {
 	height: max-content;
 }
 
+.illustration__box--desktop {
+	display: none;
+}
+
 @media (min-width: 1098px) {
 	.illustration {
 		display: none;
@@ -154,22 +161,55 @@ body {
 	.illustration--desktop {
 		position: relative;
 		display: block;
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	.illustration__woman--desktop {
-		/* position: absolute; */
+		position: absolute;
+		left: -5rem;
+		top: 0;
+		height: 100%;
+		overflow: hidden;
 	}
 
 	.illustration__box--desktop {
+		display: block;
 		position: absolute;
-	}
-
-	.illustration__pattern--desktop {
-		position: absolute;
+		z-index: 1;
+		top: 13rem;
+		left: -6rem;
 	}
 
 	.accordian {
 		flex-direction: row;
-		padding: 3rem 3rem 3rem 0;
+		gap: 5em;
+
+		margin: 0;
+		height: 32rem;
+		padding: 5rem 5rem 5rem 0;
+		background-image: url('./images/bg-pattern-desktop.svg');
+		background-size: 65%;
+		background-repeat: no-repeat;
+		background-position-x: -15rem;
+		background-position-y: -3rem;
+	}
+
+	.faq {
+		width: 50%;
+		align-items: flex-start;
+	}
+
+	.faq__heading {
+		font-size: 1.75rem;
+	}
+
+	.faq__question {
+		font-size: 1rem;
+	}
+
+	.faq__answer {
+		font-size: 0.9rem;
 	}
 }
